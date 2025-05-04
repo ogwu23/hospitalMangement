@@ -1,0 +1,39 @@
+<div class="dashboard-container">
+    <div class="cards-grid">
+      <mat-card class="card">
+        <h3>Total Patients</h3>
+        <p>{{ totalPatients }}</p>
+      </mat-card>
+  
+      <mat-card class="card">
+        <h3>Appointments Today</h3>
+        <p>{{ appointmentsToday }}</p>
+      </mat-card>
+  
+      <mat-card class="card">
+        <h3>Total Revenue</h3>
+        <p>₦{{ totalRevenue | number }}</p>
+      </mat-card>
+    </div>
+  
+    <div class="charts-grid">
+      <mat-card>
+        <h3>Appointment Trends</h3>
+        <apx-chart
+          [series]="appointmentTrends.series"
+          [chart]="appointmentTrends.chart"
+          [xaxis]="appointmentTrends.xaxis"
+        ></apx-chart>
+      </mat-card>
+  
+      <mat-card>
+        <h3>Appointment Status</h3>
+        <apx-chart
+          [series]="appointmentStatus.series"
+          [chart]="appointmentStatus.chart"
+          [labels]="appointmentStatus.labels"
+        ></apx-chart>
+      </mat-card>
+    </div>
+  </div>
+  

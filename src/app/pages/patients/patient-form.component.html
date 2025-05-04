@@ -1,0 +1,39 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()" class="patient-form">
+    <mat-form-field appearance="outline">
+      <mat-label>Name</mat-label>
+      <input matInput formControlName="name" required />
+    </mat-form-field>
+  
+    <mat-form-field appearance="outline">
+      <mat-label>Age</mat-label>
+      <input matInput formControlName="age" type="number" required />
+    </mat-form-field>
+  
+    <mat-form-field appearance="outline">
+      <mat-label>Gender</mat-label>
+      <mat-select formControlName="gender" required>
+        <mat-option value="Male">Male</mat-option>
+        <mat-option value="Female">Female</mat-option>
+      </mat-select>
+    </mat-form-field>
+  
+    <mat-form-field appearance="outline">
+      <mat-label>Phone</mat-label>
+      <input matInput formControlName="phone" required />
+    </mat-form-field>
+  
+    <mat-form-field appearance="outline">
+      <mat-label>Address</mat-label>
+      <input matInput formControlName="address" required />
+    </mat-form-field>
+  
+    <mat-form-field appearance="outline">
+      <mat-label>Medical History</mat-label>
+      <textarea matInput formControlName="medicalHistory"></textarea>
+    </mat-form-field>
+  
+    <button mat-raised-button color="primary" type="submit">
+      {{ isEdit ? 'Update' : 'Create' }} Patient
+    </button>
+  </form>
+  

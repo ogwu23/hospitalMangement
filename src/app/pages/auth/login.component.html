@@ -1,0 +1,18 @@
+<div class="login-container">
+    <form [formGroup]="form" (ngSubmit)="login()" class="login-form">
+      <h2>Hospital Login</h2>
+  
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" type="email" />
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Password</mat-label>
+        <input matInput formControlName="password" type="password" />
+      </mat-form-field>
+  
+      <button mat-raised-button color="primary" class="full-width">Login</button>
+    </form>
+  </div>
+  
